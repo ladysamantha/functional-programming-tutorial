@@ -28,10 +28,9 @@ sortWordCount = sortBy $ \a b -> snd b `compare` snd a
 sortByWordCount = sortWordCount . wordCount
 
 main = do
-  let printCount (w, c) = do
-      putStrLn $ w ++ ": " ++ (show c)
+  let printCount (w, c) = do putStrLn $ w ++ ": " ++ (show c)
   top10 <- take 10 . sortByWordCount <$> readFile "leaves.txt"
   putStrLn "Word: Count"
   putStrLn "++++++++++++++++++"
   forM_ top10 printCount
-    
+

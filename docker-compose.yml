@@ -1,0 +1,18 @@
+version: '3'
+services:
+  fsharp:
+    build:
+      context: ./
+      dockerfile: fsharp.dockerfile
+  clojure:
+    build:
+      context: ./
+      dockerfile: clj.dockerfile
+  haskell:
+    build:
+      context: ./
+      dockerfile: haskell.dockerfile
+  nodejs:
+    build:
+      context: ./
+      dockerfile: node.dockerfile

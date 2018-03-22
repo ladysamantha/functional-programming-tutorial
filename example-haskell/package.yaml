@@ -1,0 +1,41 @@
+name:                example-haskell
+version:             0.1.0.0
+github:              "ladysamantha/functional-programming-tutorial"
+license:             BSD3
+author:              "Samantha Enders"
+maintainer:          "ladysamantha@protonmail.com"
+copyright:           "2018"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            example
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on Github at <https://github.com/ladysamantha/functional-programming-tutorial#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+
+executables:
+  example-haskell-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+
+tests:
+  example-haskell-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
